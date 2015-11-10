@@ -71,10 +71,10 @@
     function insert() {
         var result,
             options = "",
-            html5State = $("#video").is(":checked"),
-            youtubeAutoplay = $("#youtubeAutoplay").is(":checked"),
-            youtubeREL = $("#youtubeREL").is(":checked"),
-            youtubeHD = $("#youtubeHD").is(":checked"),
+            html5State = 1,
+            youtubeAutoplay = 0,
+            youtubeREL = 0,
+            youtubeHD = 1,
             width = $("#youtubeWidth").val(),
             height = $("#youtubeHeight").val(),
             newYouTubeUrl = convertUrl($('#youtubeID').val(), html5State);
