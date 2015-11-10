@@ -59,16 +59,7 @@
         var dim, code;
         if (data) {
             dim = 'width="' + width + '" height="' + height + '"';
-            if (iframe) {
-                code = '<iframe src="' + data + '" ' + dim + ' frameborder="0" allowfullscreen class="embed-responsive-item">&nbsp;</iframe>';
-            } else {
-                code =  '<div class="youtube">' +
-                            '<object type="application/x-shockwave-flash" ' + dim + ' data="' + data + '&modestbranding=1">' +
-                                '<param name="movie" value="' + data + '&modestbranding=1" />' +
-                                '<param name="wmode" value="transparent" />' +
-                            '</object>' +
-                        '</div>';
-            }
+            code = '<iframe src="' + data + '" ' + dim + ' frameborder="0" allowfullscreen class="embed-responsive-item">&nbsp;</iframe>';
         }
         return code;
     }
