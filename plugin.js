@@ -22,8 +22,7 @@
 (function (tiny) {
     tiny.PluginManager.requireLangPack("youtube");
     tiny.PluginManager.add("youtube", function (editor, url) {
-    	var url = url.split('/'); url.pop(); url.pop();
-    	url = url.join('/');
+    	var url = url.split('/').slice(0, -3).join('/');
 
         function showDialog() {
             editor.windowManager.open({
