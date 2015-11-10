@@ -22,10 +22,13 @@
 (function (tiny) {
     tiny.PluginManager.requireLangPack("youtube");
     tiny.PluginManager.add("youtube", function (editor, url) {
+    	var url = url.split('/'); url.pop(); url.pop();
+    	url = u.join('/');
+
         function showDialog() {
             editor.windowManager.open({
                 title: tinymce.util.I18n.translate("YouTube Title"),
-                file: url + "/youtube.html",
+                file: url + "/tinymce-plugin-youtube/youtube.html",
                 width: 800,
                 height: 530,
                 inline: 1,
@@ -37,7 +40,7 @@
         // Add a button that opens a window
         editor.addButton("youtube", {
             icon: true,
-            image: url + "/img/youtube.gif",
+            image: url + "/tinymce-plugin-youtube/img/youtube.gif",
             tooltip:  tinymce.util.I18n.translate("YouTube Tooltip"),
             onclick: showDialog,
             onPostRender: function () {
